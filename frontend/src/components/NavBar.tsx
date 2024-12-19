@@ -12,13 +12,14 @@ export default function NavBar(){
         bg-navBarBg
         items-center
         rounded-lg
+        shadow-sm
         ">
             {/*Elements inside navbar*/}
             <div className="flex justify-between w-full h-full text-navBarText">
                 {/*nav links Left side*/}
                 <ul className="flex items-center">
                     <li className="pl-3 hover:text-navBarHover cursor-pointer h-4/5 min-w-12">
-                        <img className="h-full"
+                        <img className="h-full drop-shadow-2xl"
                             src="/UiS_Logo.svg" alt="Logo"/>
                     </li>
                 </ul>

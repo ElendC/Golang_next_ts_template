@@ -17,7 +17,7 @@ export default function RootLayout({
         <div className="flex">
             <NavBar/>
         </div>
-        <h1 className="font-black">hello</h1>
+        <h1 className=" flex font-black justify-center text-2xl">Title that is not needed</h1>
         {children}</body>
         </html>
     )

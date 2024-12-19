@@ -14,7 +14,7 @@ export default function Page() {
   }, []);
 
   return (
-      <main>
+      <main className="p-1">
         <h1>{data.title}</h1>
         <h2>Backend string above and under this header</h2>
         <p>{data.body}</p>

@@ -2,31 +2,36 @@
 export default function NavBar(){
     return(
         /*Whole Navbar outside*/
-        <div className="
+        <nav className="
         fixed
         top-0
         h-14
         w-screen
         flex
-        bg-gray-800
+        {/*bg-gray-800*/}
+        bg-navBarBg
         items-center
-        rounded-2xl
+        rounded-lg
         ">
             {/*Elements inside navbar*/}
-            <div className="flex justify-between w-full">
+            <div className="flex justify-between w-full h-full text-navBarText">
                 {/*nav links Left side*/}
-                <div className="flex">
-                    <i className="m-2">Home</i>
-                    <i className="m-2">About</i>
-                    <i className="m-2">Contact</i>
-                </div>
+                <ul className="flex items-center">
+                    <li className="pl-3 hover:text-navBarHover cursor-pointer h-4/5 min-w-12">
+                        <img className="h-full"
+                            src="/UiS_Logo.svg" alt="Logo"/>
+                    </li>
+                </ul>
                 {/*nav links Right side*/}
-                <div className="flex">
-                    <i className="m-2">Login</i>
-                    <i className="m-2">Logout</i>
-                    <i className="m-2">Search</i>
-                </div>
+                <ul className="flex flex-wrap items-center overflow-hidden  max-h-14">
+                    <li><i className="m-2 hover:text-navBarHover cursor-pointer">Search</i></li>
+                    <li><i className="m-2 hover:text-navBarHover cursor-pointer">Home</i></li>
+                    <li><i className="m-2 hover:text-navBarHover cursor-pointer">About</i></li>
+                    <li><i className="m-2 hover:text-navBarHover cursor-pointer">Something</i></li>
+                    <li><i className="m-2 hover:text-navBarHover cursor-pointer">Something</i></li>
+                    <li><i className="m-2 hover:text-navBarHover cursor-pointer pr-3">Login</i></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     )
 }

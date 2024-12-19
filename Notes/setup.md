@@ -1,10 +1,11 @@
-# Setting Up The Application
+# Setting Up The Application Yourself
 ## Folders
 Create separate ``frontend`` and ``backend`` folders.
 
 ## React frontend
 ### Creating Next.js project
 In terminal run: ``npx create-next-app@latest .``
+
 
 Current Setup:
 

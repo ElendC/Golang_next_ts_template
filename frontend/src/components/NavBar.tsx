@@ -9,7 +9,7 @@ export default function NavBar(){
         w-screen
         flex
         {/*bg-gray-800*/}
-        bg-navBarBg
+        bg-whiteBg
         items-center
         rounded-lg
         shadow-sm

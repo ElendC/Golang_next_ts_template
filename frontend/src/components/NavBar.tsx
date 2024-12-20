@@ -20,7 +20,7 @@ export default function NavBar(){
                 <ul className="flex items-center">
                     <li className="pl-3 hover:text-navBarHover cursor-pointer h-4/5 min-w-12">
                         <img className="h-full drop-shadow-2xl"
-                            src="/UiS_Logo.svg" alt="Logo"/>
+                             src="/icons/UiS_Logo.svg" alt="Logo"/>
                     </li>
                 </ul>
                 {/*nav links Right side*/}
@@ -30,7 +30,10 @@ export default function NavBar(){
                     <li><i className="m-2 hover:text-navBarHover cursor-pointer">About</i></li>
                     <li><i className="m-2 hover:text-navBarHover cursor-pointer">Something</i></li>
                     <li><i className="m-2 hover:text-navBarHover cursor-pointer">Something</i></li>
-                    <li><i className="m-2 hover:text-navBarHover cursor-pointer pr-3">Login</i></li>
+                    <li>
+                        <img className="h-full drop-shadow-2xl m-3 hover:text-navBarHover cursor-pointer"
+                             src="/icons/log-in.svg" alt="Logo"/>
+                    </li>
                 </ul>
             </div>
         </nav>

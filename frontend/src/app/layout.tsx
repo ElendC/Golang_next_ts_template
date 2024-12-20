@@ -1,6 +1,7 @@
 import React from "react";
 import "@/styles/globals.css";
 import NavBar from "@/components/NavBar";
+import Login from "@/components/authentication/Login";
 
 export default function RootLayout({
                                        children,
@@ -17,6 +18,7 @@ export default function RootLayout({
         <div className="flex">
             <NavBar/>
         </div>
+
         <h1 className=" flex font-black justify-center text-2xl">Title that is not needed</h1>
         {children}</body>
         </html>

@@ -11,9 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        navBarBg: '#F8F9FA',
+        whiteBg: '#F8F9FA',
         navBarHover: '#87CEEB',
-        navBarText: '#00205B',
       },
     },
   },

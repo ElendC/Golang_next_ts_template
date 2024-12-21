@@ -19,7 +19,7 @@ export default function LoginComponent(){
         })
 
         if (response.ok){
-            await router.push('/home')
+            router.push('/home')
         } else{
             console.log("Wrong login stuff....")
             return //Handle error later

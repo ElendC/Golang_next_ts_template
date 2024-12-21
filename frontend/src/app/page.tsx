@@ -13,7 +13,7 @@ export default function Page() {
     // useEffect: Runs code inside the effect after the component/page renders.
     // Empty array [] at the end, ensures effect only runs once.
     useEffect(() => {
-        fetch('/api/home', {
+        fetch('/api/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

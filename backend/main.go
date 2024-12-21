@@ -1,8 +1,7 @@
 package main
 
 import (
-	"backend/handlers/about"
-	"backend/handlers/home"
+	"backend/routes"
 	"fmt"
 	"log"
 	"net/http"
@@ -11,8 +10,7 @@ import (
 func main() {
 
 	// Handlers
-	http.HandleFunc("/home", home.Handler)   // Route for "/home"
-	http.HandleFunc("/about", about.Handler) // Route for "/about"
+	routes.SetupRoutes()
 
 	fmt.Println("Backend Server Starting at 8080...")
 	//Starts backend server at port 8080

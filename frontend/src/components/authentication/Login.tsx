@@ -27,11 +27,9 @@ export default function LoginComponent(){
     }
 
     return (
-        <div>
-            <br/><br/><br/><br/><br/><br/>
-
-            {/*try: bg-gray-100*/}
-            <div className="flex flex-col justify-center items-center bg-whiteBg max-w-96 min-w-56 rounded-lg shadow-lg pl-6 pr-6">
+        <div className="p-20">
+            {/*TODO: try: bg-gray-100*/}
+            <div className="flex flex-col justify-center items-center bg-whiteBg max-w-96 min-w-56 rounded-lg shadow-lg p-12 pt-10">
                 {/*Header container*/}
                 <div className="text-foreground text-3xl font-bold p-5">
                     <h2>Login</h2>
@@ -52,8 +50,8 @@ export default function LoginComponent(){
                         className="w-full p-2 text-white hover:text-green-100 bg-green-600 rounded-md hover:bg-green-700"
                         >Login</button>
                     </form>
-                    <div className="text-blue-600 m-4 hover:underline flex flex-col items-center">
-                        <a href="/register"  >Register</a>
+                    <div className="text-blue-600 m-4  flex flex-col items-center">
+                        <a className="hover:underline" href="/register"  >Register</a>
                     </div>
                 </div>
             </div>

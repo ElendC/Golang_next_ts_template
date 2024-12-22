@@ -5,6 +5,7 @@ export default function NavBar(){
         /*Whole Navbar outside*/
         <nav className="
         fixed
+        z-50
         top-0
         h-14
         w-screen

@@ -2,6 +2,8 @@ import React from "react";
 import "@/styles/globals.css";
 import NavBar from "@/components/NavBar";
 import Login from "@/components/authentication/Login";
+import Tilbud from "@/components/Tillbud";
+
 
 export default function RootLayout({
                                        children,
@@ -18,8 +20,25 @@ export default function RootLayout({
         <div className="flex">
             <NavBar/>
         </div>
+{/*        <div className="absolute inset-0 flex justify-center  mt-28">
+            <Tilbud></Tilbud>
+        </div>*/}
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-        {children}</body>
+        {children}
+
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+        </body>
         </html>
     )
 }

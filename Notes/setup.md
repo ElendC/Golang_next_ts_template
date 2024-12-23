@@ -35,6 +35,7 @@ is created inside it.
 1. Defines the content for a specific route
 
 
+
 ### Extra stuff
 1. Check the ``next.config.ts`` file for comments.
 

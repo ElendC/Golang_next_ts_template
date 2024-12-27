@@ -15,6 +15,7 @@ export default function NavBar(){
         items-center
         rounded-lg
         shadow-sm
+        pr-3
         ">
             {/*Elements inside navbar*/}
             <div className="flex justify-between w-full h-full text-navBarText">

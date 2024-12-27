@@ -2,7 +2,6 @@
 "use client"; // Enables client-side React code
 
 import React, { useEffect, useState } from "react";
-import Login from "@/components/authentication/Login";
 
 
 export default function Page() {

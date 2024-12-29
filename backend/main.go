@@ -1,6 +1,8 @@
 package main
 
 import (
+	"backend/database"
+	"backend/environment"
 	"backend/routes"
 	"fmt"
 	"log"
@@ -8,7 +10,14 @@ import (
 )
 
 func main() {
+	err := environment.LoadEnvFile("./environment/.env")
+	if err != nil {
+		log.Fatalf("Error loading .env file: %v", err)
+	}
 
+	// Initialize and test Database Connection
+	database.DbConfig()
+	
 	// Handlers
 	routes.SetupRoutes()
 

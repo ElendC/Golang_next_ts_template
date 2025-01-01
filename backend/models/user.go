@@ -2,10 +2,10 @@ package models
 
 import "time"
 
-type User struct {
+type StudentUser struct {
 	Id           string `json:"id"`
 	Username     string `json:"username"`
-	PasswordHash string `json:"-"`
+	PasswordHash string `json:"-"` //Don't need if we use FEIDE
 
 	Email       string `json:"email"`
 	PhoneNumber string `json:"phone_number,omitempty"`

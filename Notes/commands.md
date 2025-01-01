@@ -13,5 +13,8 @@ Commands provided by ``/frontend/package.json``
 `git fetch`
 ### List all remote branches
 `git branch -r`
-### switch branch
+### Switch branch
 `git checkout <branchName>`
+### Delete branch
+`git branch --delete <branchname>`
+

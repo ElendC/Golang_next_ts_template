@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: '/api/:path*', // Write this when fetching
-                destination: 'http://localhost:8080/:path*', // Instead of this
+                destination: 'https://localhost:443/:path*', // Instead of this
             }
         ]
     }

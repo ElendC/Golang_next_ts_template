@@ -1,5 +1,13 @@
 # Info about the template
 ## How to start the application
+### First time run (CORS SETUP)
+next.js for some reason won't accept my self-made certificate which I spent a lot of time perfecting.
+Fortunately they do have an experimental feature if you do not want to disable https in development mode!
+1. run the frontend application as shown below.
+2. certificate folder will be created autoamtically, move it into the backend folder.
+3. Start the application as shown below.
+
+### Now run it normally: 
 1. Run the `main.go` file to start the backend server.
 2. cd into the `frontend` folder and run the command `npm run dev`
 3. Backend now runs at port 8080 while frontend runs at 3000.

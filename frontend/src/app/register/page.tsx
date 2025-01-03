@@ -32,7 +32,9 @@ const RegisterForm: React.FC = () => {
             });
 
             if (response.ok) {
-                const data = await response.text(); // Assuming the backend sends plain text
+                const data = await response.text();
+                console.log("Response Data:", data);
+
                 setMessage(`Success: ${data}`);
             } else {
                 const error = await response.text();

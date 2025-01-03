@@ -6,6 +6,7 @@ import (
 )
 
 // TODO: Do not need in production as frontend most likely will be compiled and serve the backend
+// TODO: Can also add this globally, so we won't need to add it in each handler that uses cors
 // Tutorial: https://www.stackhawk.com/blog/golang-cors-guide-what-it-is-and-how-to-enable-it/
 
 func EnableCors(w *http.ResponseWriter) {

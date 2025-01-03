@@ -4,19 +4,26 @@ import (
 	"backend/database"
 	"backend/environment"
 	"backend/routes"
-	"log"
+	"fmt"
 )
 
 func main() {
+	// Loads environment variables
 	err := environment.LoadEnvFile("./environment/.env")
 	if err != nil {
-		log.Fatalf("Error loading .env file: %v", err)
-	} //TODO: make a print instead of log
+		fmt.Printf("Error loading .env file: %v\n", err)
+		return
+	}
 
-	// Initialize and test Database Connection
-	database.DbConfig()
+	// Initialize database and create tables
+	pool, err2 := database.DbConfig()
+	if err2 != nil {
+		fmt.Printf("Database config failed: %v\n", err2)
+		return
+	}
+	defer pool.Close()
 
-	// Handlers
+	// Sets up routes for all handlers
 	routes.SetupRoutes()
 
 	//Starts backend server

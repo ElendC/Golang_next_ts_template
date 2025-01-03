@@ -9,3 +9,5 @@
 Remove the experimental flag
 ` "dev": "next dev --experimental-https",`
 
+DOING NOW: 
+REgister handler

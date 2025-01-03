@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// TODO: Do not need to production. As frontend most likely will be compiled and serve the backend
+// TODO: Do not need in production as frontend most likely will be compiled and serve the backend
 // Tutorial: https://www.stackhawk.com/blog/golang-cors-guide-what-it-is-and-how-to-enable-it/
 
 func EnableCors(w *http.ResponseWriter) {

@@ -3,26 +3,31 @@ package database
 import (
 	"context"
 	"fmt"
-	"github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5/pgxpool"
 	"os"
 )
 
-func DbConfig() {
+// App will hold the instance for pgx.pool.Pool which is the database connection.
+type App struct {
+	DB *pgxpool.Pool
+}
 
-	// Connect to the database using the DATABASE_URL from the environment
-	conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
-		os.Exit(1)
-	}
-	defer conn.Close(context.Background())
+// DbConfig sets up a pool connection to the database and create tables
+func DbConfig() (*pgxpool.Pool, error) {
 
-	// Testing connection
-	var greeting string
-	err = conn.QueryRow(context.Background(), "select 'Hello, world. Database connection succeed!'").Scan(&greeting) //Scan maps query results into variables
+	// Initialize connection pool
+	pool, err := pgxpool.New(context.Background(), os.Getenv("DATABASE_URL"))
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "QueryRow failed: %v\n", err)
-		os.Exit(1)
+		return nil, fmt.Errorf("unable to create connection pool: %v", err)
 	}
-	fmt.Println(greeting)
+
+	app := &App{DB: pool}
+
+	// Creating tables
+	err2 := CreateUserTable(app.DB)
+	if err2 != nil {
+		return nil, fmt.Errorf("unable to create user table: %v", err2)
+	}
+
+	return pool, nil
 }
